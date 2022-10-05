@@ -1,0 +1,13 @@
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.1\GestorRH.App.Persistencia.AssemblyInfoInputs.cache
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.1\GestorRH.App.Persistencia.AssemblyInfo.cs
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.1\GestorRH.App.Persistencia.csproj.CoreCompileInputs.cache
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\bin\Debug\netstandard2.1\GestorRH.App.Persistencia.deps.json
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\bin\Debug\netstandard2.1\GestorRH.App.Persistencia.dll
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\bin\Debug\netstandard2.1\GestorRH.App.Persistencia.pdb
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\bin\Debug\netstandard2.1\GestorRH.App.Dominio.dll
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\bin\Debug\netstandard2.1\GestorRH.App.Dominio.pdb
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.1\GestorRH.App.Persistencia.csproj.CopyComplete
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.1\GestorRH.App.Persistencia.dll
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.1\GestorRH.App.Persistencia.pdb
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.1\GestorRH.App.Persistencia.csproj.AssemblyReference.cache
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.1\GestorRH.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig

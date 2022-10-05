@@ -1,0 +1,4 @@
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.0\GestorRH.App.Persistencia.csprojAssemblyReference.cache
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.0\GestorRH.App.Persistencia.AssemblyInfoInputs.cache
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.0\GestorRH.App.Persistencia.AssemblyInfo.cs
+B:\GestorRH\GestorRH.App\GestorRH.App.Persistencia\obj\Debug\netstandard2.0\GestorRH.App.Persistencia.csproj.CoreCompileInputs.cache
