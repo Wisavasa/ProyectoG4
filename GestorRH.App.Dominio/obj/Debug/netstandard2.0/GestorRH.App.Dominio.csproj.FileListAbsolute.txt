@@ -1,0 +1,10 @@
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\obj\Debug\netstandard2.0\GestorRH.App.Dominio.AssemblyInfoInputs.cache
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\obj\Debug\netstandard2.0\GestorRH.App.Dominio.AssemblyInfo.cs
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\obj\Debug\netstandard2.0\GestorRH.App.Dominio.csproj.CoreCompileInputs.cache
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\bin\Debug\netstandard2.0\GestorRH.App.Dominio.deps.json
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\bin\Debug\netstandard2.0\GestorRH.App.Dominio.dll
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\bin\Debug\netstandard2.0\GestorRH.App.Dominio.pdb
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\obj\Debug\netstandard2.0\GestorRH.App.Dominio.dll
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\obj\Debug\netstandard2.0\GestorRH.App.Dominio.pdb
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\obj\Debug\netstandard2.0\GestorRH.App.Dominio.csproj.AssemblyReference.cache
+B:\GestorRH\GestorRH.App\GestorRH.App.Dominio\obj\Debug\netstandard2.0\GestorRH.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig

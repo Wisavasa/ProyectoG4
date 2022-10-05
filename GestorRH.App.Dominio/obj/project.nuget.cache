@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "5P0Aiu7fZDlw8kXXleCEq66koRDYf9CqvARTTiefYlWGWyAh11Tj1R3YCyIB6t1S0k8XDVt/rI1BNkQ5u/X56Q==",
+  "success": true,
+  "projectFilePath": "B:\\GestorRH\\GestorRH.App\\GestorRH.App.Dominio\\GestorRH.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alejandro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Alejandro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
