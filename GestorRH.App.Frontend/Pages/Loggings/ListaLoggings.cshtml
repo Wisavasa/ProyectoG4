@@ -1,0 +1,60 @@
+﻿@page
+@model GestorRH.App.Frontend.Pages.ListaLoggingsModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador | Grupo4</title>
+    <link rel="stylesheet" href="~/css/estilohome.css">
+</head>
+<body>
+        <div class="wrapper">
+            <div class="pestana">
+                <h2>Usuarios</h2>
+                <ul> 
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./ListaLoggings"><img class="logo" src="~/img/leerUsuario.png" width="35" height="35" alt="Leer Usuario">Buscar</a></li>                              
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./CrearLoggings"><img class="logo" src="~/img/agregarUsuario.png" width="35" height="35" alt="Agregar Usuario">Crear</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EliminarLoggings"><img class="logo" src="~/img/borrarUsuario.png" width="35" height="35" alt="Eliminar Trabajador">Borrar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EditarLoggings"><img class="logo" src="~/img/editarUsuario.png" width="35" height="35" alt="Actualizar Usuario">Editar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="/Inicial/SuperUser"><img class="logo" src="~/img/volver.png" width="35" height="35" alt="F que flipas Usuario">Volver</i></a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div> <img class="logo" src="~/img/recursos2.webp">
+                <div class="header">SISTEMA DE USUARIO</div>
+                  <div class="info">
+                    <form method="post" >
+                    <div class="filtro">
+                                     <label for="usuario">Ingrese el nombre de usuario</label>
+                                     <input asp-for="logginFiltro.Usuario" asp-route-loggingId="logginFiltro.Usuario" placeholder="Ingrese Nombre" class="form-control">
+                                     <button type="submit" class="btn btn-primary">Buscar</button>
+                                </div></form>
+                                <div class="Temporal">@if(TempData["success"]!=null)
+                                    {
+                                        <h2>@TempData["success"]</h2>
+                                    }</div>
+                        <table class="table">
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Contraseña</th>
+                                <th>SuperUsuario</th>
+                            </tr>
+                            @foreach (var logging in Model.listaLogging)
+                            {
+                                <tr>
+                                    <td>@logging.Usuario</td>
+                                    <td>@logging.Contrasena</td>
+                                    <td>@logging.SuperUser</td>
+                            </tr>
+                            }
+                        </table>
+                  </div>
+                </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@page
+@model GestorRH.App.Frontend.Pages.HomeTrabajadoresModel
+@{
+}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador | Grupo4</title>
+    <link rel="stylesheet" href="~/css/estilohome.css">
+</head>
+<body>
+        <div class="wrapper">
+            <div class="pestana">
+                <h2>Trabajador</h2>
+                <ul> 
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./Listatrabajadores"><img class="logo" src="~/img/buscarTrabajador.png" width="40" height="40" alt="Leer Trabajador">Buscar</a></li>                              
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./CrearTrabajador"><img class="logo" src="~/img/crearTrabajador.png" width="40" height="40" alt="Agregar Trabajador">Crear</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EliminarTrabajador"><img class="logo" src="~/img/borrarTrabajador.png" width="40" height="40" alt="Eliminar Trabajador">Borrar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EditarTrabajador"><img class="logo" src="~/img/editarTrabajador.png" width="40" height="40" alt="Actualizar Trabajador">Editar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="/Inicial/SuperUser"><img class="logo" src="~/img/volver.png" width="40" height="40" alt="Volver">Volver</i></a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div> <img class="backhome" src="~/img/recursos2.webp">
+                    <div class="header">SISTEMA DE TRABAJADORES</div>
+                    <div class="info">
+                        <div>En el presente Menú  podra realizar las acciones correspondientes a las bases de datos de los trabajadores<br>
+                            Recuerde NO compartir informacion personal fuera del area de trabajo.
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+</body>
+</html>

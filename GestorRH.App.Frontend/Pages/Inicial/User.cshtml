@@ -1,0 +1,40 @@
+﻿@page
+@model GestorRH.App.Frontend.Pages.UserModel
+@{
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador | Grupo4</title>
+    <link rel="stylesheet" href="~/css/estilohome.css">
+</head>
+<body>
+        <div class="wrapper">
+            <div class="pestana">
+                <h2>Gestionar<br><h5>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Usuario: @Model.logging.Usuario</h5></h2>
+                <ul> 
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="/Trabajadores/HomeTrabajadores"><img class="logo" src="~/img/empresario.png" width="40" height="40" alt="Leer Usuario">Trabajadores</a></li>                              
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="/Cargos/ListaCargos"><img class="logo" src="~/img/maletin.png" width="40" height="40" alt="Agregar Usuario">Cargos</a></li>                   
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="/index"><img class="logo" src="~/img/cerrar.png" width="40" height="40" alt="F que flipas Usuario">Cerrar Sesión</i></a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div> <img class="homer" src="~/img/rh4.png">
+                    <div class="header">Gestion de Recursos Humanos</div>
+                    <div class="info">
+                        <div class="Temporal">
+                            @if(TempData["success"]!=null)
+                            {
+                                <h2>@TempData["success"]</h2>
+                            }
+                        </div>
+                        
+                    </div> 
+                </div>
+            </div>
+        </div>
+</body>
+</html>

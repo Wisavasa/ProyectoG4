@@ -1,0 +1,60 @@
+﻿@page
+@model GestorRH.App.Frontend.Pages.CrearTrabajadorModel
+@{
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador | Grupo4</title>
+    <link rel="stylesheet" href="~/css/estilo-formulario.css">
+</head>
+<body>
+        <div class="wrapper">
+            <div class="pestana">
+                <h2>Trabajador</h2>
+                <ul> 
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./Listatrabajadores"><img class="logo" src="~/img/buscarTrabajador.png" width="40" height="40" alt="Leer Trabajador">Buscar</a></li>                              
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./CrearTrabajador"><img class="logo" src="~/img/crearTrabajador.png" width="40" height="40" alt="Agregar Trabajador">Crear</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EliminarTrabajador"><img class="logo" src="~/img/borrarTrabajador.png" width="40" height="40" alt="Eliminar Trabajador">Borrar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EditarTrabajador"><img class="logo" src="~/img/editarTrabajador.png" width="40" height="40" alt="Actualizar Trabajador">Editar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="/Inicial/SuperUser"><img class="logo" src="~/img/volver.png" width="40" height="40" alt="Volver">Volver</i></a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="header">SISTEMA DE TRABAJADORES</div>
+                  <div class="info">
+                            <form method="post" >
+                                <div class="form-group">
+                                    <input type="hidden" asp-for = "trabajador.Id" />
+                                    <label asp-for="trabajador.Nombres"></label>
+                                    <input asp-for="trabajador.Nombres" class="form-control" placeholder="Ingrese su Nombre/s">
+                                    <label asp-for="trabajador.Apellidos"></label>
+                                    <input asp-for="trabajador.Apellidos" class="form-control" placeholder="Ingrese su Apellido/s">
+                                    <label asp-for="trabajador.FechaNacimiento"></label>
+                                    <input type="date" asp-for="trabajador.FechaNacimiento" class="form-control" placeholder="Fecha de nacimiento">
+                                    <label asp-for="trabajador.DireccionResidencia"></label>
+                                    <input asp-for="trabajador.DireccionResidencia" class="form-control" placeholder="Ingrese su dirección">
+                                    <label asp-for="trabajador.Cedula"></label>
+                                    <input asp-for="trabajador.Cedula" class="form-control" placeholder="Digite su Cédula">
+                                    <label asp-for="trabajador.Telefono"></label>
+                                    <input asp-for="trabajador.Telefono" class="form-control" placeholder="Digite su teléfono">
+                                    <label asp-for="trabajador.CorreoElectronico"></label>
+                                    <input asp-for="trabajador.CorreoElectronico" class="form-control" placeholder="Ingrese su correo electrónico">
+                                    <label for="cargo">Cargo</label>
+                                    <select id="cargo" asp-for="trabajador.Cargo.Id" name = "cargoId">
+                                        <option value="0">Seleccione el cargo</option>
+                                        @foreach(var cargo in Model.listaCargo)
+                                        {
+                                            <option value="@cargo.Id">@cargo.NombreCargo</option>
+                                        }
+                                    </select>
+                                    <button name='Super' value="@Model.logging.Id" type="submit" class="btn btn-primary">Crear Trabajador</button>
+                                </div>
+                            </form>
+                    </div>
+            </div>
+</body>
+</html>

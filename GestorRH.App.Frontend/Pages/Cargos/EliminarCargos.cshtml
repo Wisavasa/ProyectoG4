@@ -1,0 +1,66 @@
+﻿@page
+@model GestorRH.App.Frontend.Pages.EliminarCargosModel
+@{
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador | Grupo4</title>
+    <link rel="stylesheet" href="~/css/estilohome.css">
+</head>
+<body>
+        <div class="wrapper">
+            <div class="pestana">
+                <h2>Trabajador</h2>
+                <ul> 
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./ListaCargos"><img class="logo" src="~/img/buscarcargo.png" width="40" height="40" alt="Leer cargo">Buscar</a></li>                              
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./CrearCargos"><img class="logo" src="~/img/crearcargo.png" width="40" height="40" alt="Agregar cargo">Crear</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EliminarCargos"><img class="logo" src="~/img/borrarcargo.png" width="40" height="40" alt="Eliminar cargo">Borrar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EditarCargos"><img class="logo" src="~/img/editarcargo.png" width="40" height="40" alt="Actualizar cargo">Editar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="/Inicial/SuperUser"><img class="logo" src="~/img/volver.png" width="40" height="40" alt="Volver">Volver</i></a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div> <img class="logo" src="~/img/recursos2.webp">
+                <div class="header">SISTEMA DE CARGOS DE LA EMPRESA</div>
+                  <div class="info">
+                            <form method="post" >
+                                <div class="filtro">
+                                     <label for="usuario">Ingrese el nombre del cargo a Eliminar</label>
+                                     <input asp-for="cargoFiltro.NombreCargo" asp-route-loggingId="cargoFiltro.NombreCargo" placeholder="Ingrese cargo" class="form-control">
+                                     <button type="submit" class="btn btn-primary">Buscar</button>
+                                </div>
+                                <div class="Temporal">@if(TempData["success"]!=null)
+                                    {
+                                        <h2>@TempData["success"]</h2>
+                                    }</div>
+                                <table class="table">
+                                    <tr>
+                                        <th>Nombres del Cargo</th>
+                                        <th>Profesión</th>
+                                        <th>Salario</th>
+                                        <th>Fecha de ingreso</th>
+                                        <th>Fecha de Egreso</th>
+                                    </tr>
+                                    @foreach (var cargos in Model.cargo)
+                                    {
+                                        <tr>
+                                            <td>@cargos.NombreCargo</td>
+                                            <td>@cargos.Profesion</td>
+                                            <td>@cargos.Salario</td>
+                                            <td>@cargos.FechaIngreso</td>
+                                            <td>@cargos.FechaEgreso</td>
+                                            <td>                                                
+                                                <button type="submit" class="btnborrar" name="cargoId" value="@cargos.Id"><img src="~/img/borrar.png" width="30" height="30" alt="Editar Usuario"></button>
+                                            </td>
+                                        </tr>
+                                    }
+                                </table>
+                            </form>
+                    </div>
+            </div>
+</body>
+</html>

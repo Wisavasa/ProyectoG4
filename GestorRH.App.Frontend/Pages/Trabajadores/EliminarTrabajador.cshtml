@@ -1,0 +1,73 @@
+﻿@page
+@model GestorRH.App.Pages.EliminarTrabajadorModel
+@{
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador | Grupo4</title>
+    <link rel="stylesheet" href="~/css/estilohome.css">
+</head>
+<body>
+        <div class="wrapper">
+            <div class="pestana">
+                <h2>Trabajador</h2>
+                <ul> 
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./Listatrabajadores"><img class="logo" src="~/img/buscarTrabajador.png" width="40" height="40" alt="Leer Trabajador">Buscar</a></li>                              
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./CrearTrabajador"><img class="logo" src="~/img/crearTrabajador.png" width="40" height="40" alt="Agregar Trabajador">Crear</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EliminarTrabajador"><img class="logo" src="~/img/borrarTrabajador.png" width="40" height="40" alt="Eliminar Trabajador">Borrar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="./EditarTrabajador"><img class="logo" src="~/img/editarTrabajador.png" width="40" height="40" alt="Actualizar Trabajador">Editar</a></li>
+                    <li><a asp-route-Super="@Model.logging.Id" asp-page="/Inicial/SuperUser"><img class="logo" src="~/img/volver.png" width="40" height="40" alt="Volver">Volver</i></a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div> <img class="logo" src="~/img/recursos2.webp">
+                <div class="header">SISTEMA DE TRABAJADORES</div>
+                  <div class="info">
+                            <form method="post" >
+                                <div class="filtro">
+                                     <label for="usuario">Ingrese Nombre del trabajador a Eliminar</label>
+                                     <input asp-for="trabajadorFiltro.Nombres" asp-route-loggingId="trabajadorFiltro.Nombres" placeholder="Ingrese Nombre" class="form-control">
+                                     <button type="submit" class="btn btn-primary">Buscar</button>
+                                </div>
+                                <div class="Temporal">@if(TempData["success"]!=null)
+                                    {
+                                        <h2>@TempData["success"]</h2>
+                                    }</div>
+                                <table class="table">
+                            <tr>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>FechaN de Nacimiento</th>
+                                <th>DireccionResidencia</th>
+                                <th>Cedula</th>
+                                <th>Telefono</th>
+                                <th>CorreoElectronico</th>
+                                <th>Cargo</th>
+                            </tr>
+                            @foreach (var trabajador in Model.trabajador)
+                            {
+                                <tr>
+                                    <td>@trabajador.Nombres</td>
+                                    <td>@trabajador.Apellidos</td>
+                                    <td>@trabajador.FechaNacimiento</td>
+                                    <td>@trabajador.DireccionResidencia</td>
+                                    <td>@trabajador.Cedula</td>
+                                    <td>@trabajador.Telefono</td>
+                                    <td>@trabajador.CorreoElectronico</td>
+                                    <td>@trabajador.Cargo.NombreCargo</td>
+                                    <td>
+                                        <button type="submit" class="btnborrar" name="trabajadorId" value="@trabajador.Id"><img src="~/img/borrar.png" width="30" height="30" alt="Editar Usuario"></button>
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                            </form>
+                    </div>
+            </div>
+</body>
+</html>

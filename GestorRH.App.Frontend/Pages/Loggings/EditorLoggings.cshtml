@@ -1,0 +1,46 @@
+﻿@page
+@model GestorRH.App.Frontend.Pages.EditorLoggingsModel
+@{
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajador | Grupo4</title>
+    <link rel="stylesheet" href="~/css/estilo-formulario.css">
+</head>
+<body>
+        <div class="wrapper">
+            <div class="pestana">
+                <h2>Trabajador</h2>
+                <ul> 
+                    <li><a asp-route-Super="@Model.log.Id" asp-page="./ListaLoggings"><img class="logo" src="~/img/leerUsuario.png" width="35" height="35" alt="Leer Usuario">Buscar</a></li>                              
+                    <li><a asp-route-Super="@Model.log.Id" asp-page="./CrearLoggings"><img class="logo" src="~/img/agregarUsuario.png" width="35" height="35" alt="Agregar Usuario">Crear</a></li>
+                    <li><a asp-route-Super="@Model.log.Id" asp-page="./EliminarLoggings"><img class="logo" src="~/img/borrarUsuario.png" width="35" height="35" alt="Eliminar Trabajador">Borrar</a></li>
+                    <li><a asp-route-Super="@Model.log.Id" asp-page="./EditarLoggings"><img class="logo" src="~/img/editarUsuario.png" width="35" height="35" alt="Actualizar Usuario">Editar</a></li>
+                    <li><a asp-route-Super="@Model.log.Id" asp-page="/Inicial/SuperUser"><img class="logo" src="~/img/volver.png" width="35" height="35" alt="F que flipas Usuario">Volver</i></a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="header">SISTEMA DE USUARIOS</div>
+                  <div class="info">
+                    <form method="post" >
+                        <div class="form-group">
+                            <input type="hidden" asp-for = "logging.Id" />
+                            <label asp-for="logging.Usuario"></label>
+                            <input asp-for="logging.Usuario" class="form-control">
+                            <label asp-for="logging.Contrasena"></label>
+                            <input asp-for="logging.Contrasena" class="form-control">
+                            <label asp-for="logging.SuperUser"></label>
+                            <input asp-for="logging.SuperUser" class="form-control">
+                            
+                            <button type="submit" class="btn btn-primary">Grabar</button>
+                        </div>
+                    </form>
+                 </div>
+            </div>
+        </div>
+</body>
+</html>

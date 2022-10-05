@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+   
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Grupo4</title>
+    <link rel="stylesheet" href="~/css/estilos.css">
+</head>
+<body>
+    <div class="imagenbg"></div>  
+
+    <div class="login">
+        <img class="logo" src="~/img/logo.png" alt="Logo de UTP">
+        <h1>Gestion de Recursos Humanos</h1>
+        <form method="post">
+            <!--Nombre de usuario-->
+            <label for="usuario">Usuario</label>
+            <!--<input type="text" id="usuario" placeholder="Ingrese usuario">-->
+            <input asp-for="loggingFiltro.Usuario" type="text" id="usuario" placeholder="Ingrese usuario" class="form-control">
+            <!--Nombre de contraseña-->
+            <label for="contrasenia">Contraseña</label>
+            <input asp-for="loggingFiltro.Contrasena" type="password" id="contrasenia" placeholder="Ingrese contraseña">
+            
+          <input type="submit" value ="Ingresar"> 
+          <div class="Temporal">
+        @if(TempData["success"]!=null)
+        {
+            <h2>@TempData["success"]</h2>
+        }
+    </div>
+
+        </form >
+    </div>
+    
+</body>
+</html>
