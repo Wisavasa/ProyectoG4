@@ -1,0 +1,270 @@
+:root{
+    --pale-blue: hsl(225,100%,94%);
+    --bright-blue: hsl(245,75%,52%);
+    --very-pale-blue: rgba(245, 247, 255, 0.725);
+    --desaturated-blue: hsl(224,23%,55%);
+    --dark-blue: hsl(223,47%,23%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+
+}
+body{
+    background-repeat: no-repeat;
+    background-size:70vh; /* cuidado*/ 
+    background-color: var(--pale-blue);
+    font-family: sans-serif;
+    height: 100vh;
+    
+    
+}
+.wrapper{
+    display: flex;
+    position: relative;
+    
+}
+
+.wrapper .pestana{
+    position: fixed;
+    width: 300px;
+    height: 70%;
+    background:rgba(118, 40, 145, 0.165);
+    color: #000;
+    transform: translate(-120%, 20%);
+    box-sizing: border-box;
+    padding: 30px 0px;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+}
+
+.wrapper .pestana h2{
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1px;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    padding: 0px 0 20px;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+.wrapper .pestana ul li{
+    padding: 15px;
+    border-bottom: 3px solid rgba(0,0,0,0.05);
+    border-top: 2px solid rgba(225,225,225,0.05);
+    border-radius: 15px;
+    font-size: 19px;
+    background:rgba(89, 21, 131, 0.274);
+    margin: 10px;
+    text-align: bottom;
+    text-decoration: none;
+    
+}
+
+.wrapper .pestana ul li a{
+    
+    color: #0e0b1a;
+    display: block;
+    padding: 0px 0px 0px;
+    
+}
+
+.wrapper .pestana ul li a img{
+    
+    margin-right: 10px;
+    
+}
+
+
+.wrapper .pestana ul li:hover{
+    outline: none;
+    text-decoration: none;
+    background: rgba(89, 21, 131, 0.662);
+    padding: 15px 40px 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+
+.wrapper .pestana ul li:hover a{
+    color: rgb(8, 8, 8);
+}
+
+.wrapper .main-content{    
+    width: 65%;
+    max-width: 65%;
+    height: auto;
+    margin-left: 35%; 
+    margin-right: 0; 
+    
+}
+.wrapper .main-content .header{
+    width: 80%;
+    transform: translate(-16%, 30%);
+    text-align: center; 
+    padding: 15px;
+    background: rgba(89, 21, 131, 0.662);
+    color:rgb(255, 255, 255);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.wrapper .main-content .info{
+    transform: translate(-35%, 30%);
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    width: 100%;
+    height: 300px;
+    max-height: 100%;
+    max-width: 100%;
+    font-family: sans-serif;    
+    padding: 15px;
+    background: rgba(118, 40, 145, 0.165);
+    border-radius: 15px;
+    font-size: 20px;
+    
+}
+.wrapper .main-content .info .vineta ul{
+    transform: translate(-0%, 50%);
+    text-align: left; 
+    max-height: 300%;
+    max-width: 30%;
+    font-family: sans-serif;    
+    padding: 15px;
+    background: rgba(118, 40, 145, 0.165);
+    border-radius: 15px;
+    font-size: 20px;
+    flex: 1 1 auto;
+}
+.wrapper .main-content .info .vineta li{
+    list-style:disc;
+    border-bottom: 1px solid rgba(67, 66, 66, 0.484);
+}
+
+.wrapper .main-content .info .filtro{
+    transform: translate(-0%, -10%);
+    flex: 1 1 auto;
+}
+
+.wrapper .main-content .info .Temporal{
+    transform: translate(-0%, -10%);
+    background: rgba(21, 131, 43, 0.274);
+    font-size: 20px;
+}
+
+.wrapper .main-content .info .filtro label{
+    text-align:left;  
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.954);
+    font-size: 20px;   
+}
+
+.wrapper .main-content .info .filtro input{
+    width: 25%;
+    margin-bottom: 0px;
+    border:none;
+    border-bottom: 1px solid rgba(119, 40, 145, 0.743);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(19, 18, 18);
+    font-size: 20px;  
+}
+
+.wrapper .main-content .info .filtro button[type="submit"]{
+    transform: translate(-250%, -95%);
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgba(89, 21, 131, 0.274);
+    color: black;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.wrapper .main-content .info .filtro button[type="submit"]:hover{
+    background: rgba(89, 21, 131, 0.662);
+}
+
+.wrapper .main-content .logo{
+    position: absolute;
+    transform: translate(-35%, 10%);    
+    width: 70%;
+    height: auto;
+    max-width: 100%; 
+    opacity: 0.12;   
+}
+.wrapper .main-content .backhome{
+    position: absolute;
+    transform: translate(-35%, 10%);    
+    width: 70%;
+    height: auto;
+    max-width: 100%; 
+}
+.wrapper .main-content .homer{
+    position: absolute;
+    transform: translate(-30%, 50%);    
+    width: 90%;
+    height: auto;
+    max-width: 100%; 
+}
+.wrapper .main-content .info .table{
+    flex: 0 0 auto;
+    text-align: center; 
+    font-family: sans-serif;    
+    padding: 15px;
+    background: rgba(119, 40, 145, 0.27);
+    border-radius: 15px;
+    font-size: 15px;
+    
+}
+
+.wrapper .main-content .info .table th{
+    color:rgb(255, 255, 255);    
+}
+
+.wrapper .main-content .info .table th a{
+    
+    color: #0e0b1a;
+    display: block;
+    padding: 0px 0px 0px;
+    
+}
+
+.wrapper .main-content .info .table th a img{
+    
+    margin-right: 10px;
+    
+}
+.wrapper .main-content .info .table .btnborrar{
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 30px;
+    background: rgba(118, 40, 145, 0.165);
+    color: black;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.wrapper .main-content .info .table .btnborrar:hover{
+    background: rgba(89, 21, 131, 0.457);
+    height: 31px;
+    width: 31px;
+
+}

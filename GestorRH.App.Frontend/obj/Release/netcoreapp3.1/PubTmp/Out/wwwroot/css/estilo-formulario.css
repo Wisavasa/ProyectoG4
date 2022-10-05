@@ -1,0 +1,189 @@
+:root{
+    --pale-blue: hsl(225,100%,94%);
+    --bright-blue: hsl(245,75%,52%);
+    --very-pale-blue: rgba(245, 247, 255, 0.725);
+    --desaturated-blue: hsl(224,23%,55%);
+    --dark-blue: hsl(223,47%,23%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+
+}
+body{
+    background-position:50rem center;
+    background-image: url(/img/fondo9.jpg);
+    background-repeat: no-repeat;
+    background-size:60vh; /* cuidado*/ 
+    background-color: var(--pale-blue);
+    font-family: sans-serif;
+    height: 100vh;    
+    
+}
+.wrapper{
+    display: flex;
+    position: relative;
+    
+}
+
+.wrapper .pestana{
+    position: fixed;
+    width: 300px;
+    height: 70%;
+    background:rgba(118, 40, 145, 0.165);
+    color: #000;
+    transform: translate(-120%, 20%);
+    box-sizing: border-box;
+    padding: 30px 0px;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+}
+
+.wrapper .pestana h2{
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1px;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    padding: 0px 0 20px;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+.wrapper .pestana ul li{
+    padding: 15px;
+    border-bottom: 3px solid rgba(0,0,0,0.05);
+    border-top: 2px solid rgba(225,225,225,0.05);
+    border-radius: 15px;
+    font-size: 19px;
+    background:rgba(89, 21, 131, 0.274);
+    margin: 10px;
+    text-align: bottom;
+    text-decoration: none;
+    
+}
+
+.wrapper .pestana ul li a{
+    
+    color: #0e0b1a;
+    display: block;
+    padding: 0px 0px 0px;
+    
+}
+
+.wrapper .pestana ul li a img{
+    
+    margin-right: 10px;
+    
+}
+
+
+.wrapper .pestana ul li:hover{
+    outline: none;
+    text-decoration: none;
+    background: rgba(89, 21, 131, 0.662);
+    padding: 15px 40px 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+
+.wrapper .pestana ul li:hover a{
+    color: rgb(8, 8, 8);
+}
+
+.wrapper .main-content{    
+    width: 65%;
+    max-width: 65%;
+    margin-left: 35%; 
+    
+}
+.wrapper .main-content .header{
+    width: 80%;
+    transform: translate(-16%, 30%);
+    text-align: center; 
+    padding: 15px;
+    background: rgba(89, 21, 131, 0.662);
+    color:rgb(255, 255, 255);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.wrapper .main-content .info{
+    transform: translate(-35%, 8%);
+    box-sizing: border-box;
+    display: inline-block;
+    width: 150%;
+    height: 100%;
+    max-width: 150%;
+    font-family: sans-serif;    
+    padding: 15px;
+    background: rgba(118, 40, 145, 0.165);
+    border-radius: 15px;
+    font-size: 20px;
+    position: relative;
+    
+}
+.wrapper .main-content .info .form-group{
+    font-family: sans-serif;    
+    padding: 15px;
+    background: rgba(119, 40, 145, 0.27);
+    border-radius: 15px;
+    font-size: 15px;    
+}
+     
+.wrapper .main-content .info .form-group label{
+    text-align:left;  
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.954);
+    font-size: 15px;
+}
+
+.wrapper .main-content .info .form-group input{
+    width: 30%;
+    margin-bottom: 10px;
+    border:none;
+    border-bottom: 1px solid rgba(119, 40, 145, 0.743);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(37, 37, 37);
+    font-size: 15px;
+}
+.wrapper .main-content .info .form-group input::placeholder{
+    width: 80%;
+    margin-bottom: 10px;
+    border:none;
+    border-bottom: 1px solid rgba(93, 14, 120, 0.808);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(37, 37, 37);
+    font-size: 15px;
+}
+
+.wrapper .main-content .info .form-group button[type="submit"]{
+    margin-top: 26px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgba(89, 21, 131, 0.274);
+    color: black;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.wrapper .main-content .info .form-group button[type="submit"]:hover{
+    background: rgba(89, 21, 131, 0.662);
+}

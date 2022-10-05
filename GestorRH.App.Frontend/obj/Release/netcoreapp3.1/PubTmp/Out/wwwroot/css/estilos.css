@@ -1,0 +1,114 @@
+:root{
+    --pale-blue: hsl(225,100%,94%);
+    --bright-blue: hsl(245,75%,52%);
+    --very-pale-blue: hsl(225,100%,98%);
+    --desaturated-blue: hsl(224,23%,55%);
+    --dark-blue: hsl(223,47%,23%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-position: right;
+    background-image: url(/img/fondo5.webp);
+    background-repeat: no-repeat;
+    background-size:150vh; /* cuidado*/ 
+    background-color: var(--pale-blue);
+    font-family: sans-serif;
+    height: 100vh;
+    backdrop-filter: blur(1px);
+    
+}
+
+.login{
+    width: 420px;
+    height: 560px;
+    background:rgba(255, 255, 255, 0.731); 
+    color: #000;
+    top: 50%;
+    left:50%;
+    position : absolute;
+    transform: translate(-200%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+
+}
+.login .logo{
+    width: 280px;
+    height: 100px;
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 140px);
+    padding: 10px 0 0;
+    
+}
+
+.login h1{
+   margin: 0;
+   padding: 80px 0 30px;
+   text-align: center; 
+   font-size: 32px;
+}
+
+.login label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    font-size: 19px;
+}
+
+.login input{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.login input[type="text"],
+.login input[type="password"]{
+    border:none;
+    border-bottom: 1px solid rgb(99, 97, 97);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(37, 37, 37);
+    font-size: 15px;
+
+}
+
+.login input[type="text"]::placeholder,
+.login input[type="password"]::placeholder{
+    color: rgba(14, 14, 14, 0.738); 
+}
+
+.login input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgba(32, 26, 26, 0.145);
+    color: black;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.login input[type="submit"]:hover{
+    background: rgba(118, 115, 115, 0.46);
+}
+.login .Temporal{
+    transform: translate(-0%, -10%);
+    background: rgba(255, 0, 0, 0.843);
+    font-size: 20px;    
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(26, 25, 25, 0.497);
+}
+
+.login a:hover{
+    color:rgb(71, 68, 68);
+}
